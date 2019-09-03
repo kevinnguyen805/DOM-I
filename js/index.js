@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navbar = document.getElementsByTagName('nav');
+let navbar = document.querySelector('nav');
 let navAnchors = document.querySelectorAll('a');
 navAnchors[0].textContent = 'Services';
 navAnchors[1].textContent = 'Product';
@@ -49,6 +49,8 @@ navAnchors[2].textContent = 'Vision';
 navAnchors[3].textContent = 'Features';
 navAnchors[4].textContent = 'About';
 navAnchors[5].textContent = 'Contact';
+navAnchors.forEach(item => item.style.color = "green");
+
 
 let title = document.querySelector('.cta-text h1');
 let headerTitle = ['Dom', 'Is', 'Awesome'];
@@ -90,4 +92,17 @@ contact.style.width = "150px";
 
 let footer = document.querySelector('footer');
 let footerInfo = footer.querySelector('p').textContent = "Copyright Great Idea! 2018";
+
+
+// add two more elements to nav bar
+let careers = document.createElement("a");
+careers.textContent = "Careers";
+careers.style.color = "green";
+navbar.appendChild(careers);
+
+let company = document.createElement("a");
+let kevin = document.createTextNode('Company');
+company.appendChild(kevin);
+company.style.color = "green";
+navbar.prepend(company);
 
