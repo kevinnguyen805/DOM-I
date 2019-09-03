@@ -40,3 +40,54 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navbar = document.getElementsByTagName('nav');
+let navAnchors = document.querySelectorAll('a');
+navAnchors[0].textContent = 'Services';
+navAnchors[1].textContent = 'Product';
+navAnchors[2].textContent = 'Vision';
+navAnchors[3].textContent = 'Features';
+navAnchors[4].textContent = 'About';
+navAnchors[5].textContent = 'Contact';
+
+let title = document.querySelector('.cta-text h1');
+let headerTitle = ['Dom', 'Is', 'Awesome'];
+function headerTitles(){
+  for (let i=0; i<headerTitle.length;i++){
+    title.appendChild(document.createTextNode(headerTitle[i]));
+    title.appendChild(document.createElement("br"));
+  }
+}
+headerTitles(headerTitle);
+
+
+let titleBtn = document.querySelector('button');
+titleBtn.textContent = 'Get Started';
+
+let headerImg = document.getElementById('cta-img');
+headerImg.src = "img/header-img.png";
+
+let textInfo = document.querySelectorAll('.text-content p');
+textInfo.forEach(item => item.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.');
+
+let middleImg = document.getElementById('middle-img');
+middleImg.src = "img/mid-page-accent.jpg";
+
+let subTitles = document.querySelectorAll('.text-content h4');
+subTitles[0].textContent = 'Features';
+subTitles[1].textContent = 'About';
+subTitles[2].textContent = 'Services';
+subTitles[3].textContent = 'Product';
+subTitles[4].textContent = 'Vision';
+
+let contact = document.querySelector('.contact');
+let contactTitle = contact.querySelector('h4').textContent = "Contact";
+let contacts = contact.querySelectorAll('p');
+contacts[0].textContent = "123 Way 456 Street \n Somewhere, USA";
+contacts[1].textContent = "1 (888) 888-8888";
+contacts[2].textContent = "sales@greatidea.io";
+contact.style.width = "150px";
+
+let footer = document.querySelector('footer');
+let footerInfo = footer.querySelector('p').textContent = "Copyright Great Idea! 2018";
+
